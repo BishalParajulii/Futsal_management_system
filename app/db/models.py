@@ -9,7 +9,7 @@ class User(Base):
     name = Column(String)
     email = Column(String, unique=True, index=True)
     phone_number = Column(Integer, unique=True, index=True)
-    password = Column(String)
+    hashed_password = Column(String)
     user_type = Column(String)
 
     futsals = relationship("Futsal", back_populates="owner")
